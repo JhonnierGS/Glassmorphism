@@ -1,0 +1,291 @@
+body {
+    background-image: radial-gradient(circle at 14.7% 66.46%, #9e6722 0, #9d5d25 8.33%, #975227 16.67%, #8d4628 25%, #803a27 33.33%, #6e2c24 41.67%, #591f1f 50%, #441319 58.33%, #320912 66.67%, #260008 75%, #1c0000 83.33%, #100000 91.67%, #020000 100%);
+    display: grid;
+    font-family: 'Nunito', sans-serif;
+    height: 100vh;
+    margin: 0;
+    place-items: center;
+}
+
+
+
+.glassmorphism-effect {
+    background: rgba( 255, 255, 255, 0.10 );
+    box-shadow: 0 8px 32px 0 rgba(46, 42, 32, 0.37);
+    -webkit-backdrop-filter: blur( 4px );
+            backdrop-filter: blur( 4px );
+    border-radius: 16px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-gap: 20px;
+    height: 90%;
+    width: 80%;
+}
+
+.padding-box {
+    box-sizing: border-box;
+    padding: 24px;
+}
+
+/* Section 1: lado izquierdo */
+
+.title p:first-child {
+    font-size: 28px;
+    font-weight: 600;
+    margin: 0;
+}
+​
+.title p:last-child {
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+/* Objetivos .... */
+
+.object{
+    align-items: center;
+    display: flex;
+}
+
+.object div{
+    align-items: center;
+    border-radius: 50%;
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    margin-right: 10px;
+    width: 40px;
+}
+
+.object img{
+    width: 30px;
+}
+
+/* clock........ */
+.container-clock{
+    display: flex;
+    justify-content: center;
+}
+
+.box{
+    position: relative;
+    z-index: 1;
+    width: 170px;
+    height: 170px;
+    backdrop-filter: blur(25px);
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255, 0.5);
+}
+
+.clock{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(transparent, rgba(255,255,255,0.2)), url(../img/clock.png);
+    background-size: cover;
+    border-radius: 50%;
+    backdrop-filter: blur(25px);
+    border: 1px solid rgba(255,255,255,0.5);
+    border-bottom: none;
+    border-right: none;
+    box-shadow: -10px -10px 20px rgba(255,255,255,0.1),
+                10px 10px 20px rgba(0,0,0,0.1),
+                10px 40px 50px rgba(0,0,0,0.2);
+}
+
+.clock::before{
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: #fff;
+    border-radius: 50%;
+    z-index: 10000;
+}
+
+.hour,
+.min,
+.sec{
+    position: absolute;
+}
+
+.hour, .hr{
+    width: 75px;
+    height: 75px;
+}
+
+.min, .mn{
+    width: 88px;
+    height: 88px;
+}
+
+.sec, .sc{
+    width: 100px;
+    height: 100px;
+}
+
+.hr, .mn, .sc{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.hr::before{
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 35px;
+    background: #ff105e;
+    z-index: 11;
+    border-radius: 6px;
+}
+
+.mn::before{
+    content: '';
+    position: absolute;
+    width: 3px;
+    height: 45px;
+    background: #fff;
+    z-index: 12;
+    border-radius: 6px;
+}
+
+.sc::before{
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 75px;
+    background: #fff;
+    z-index: 12;
+    border-radius: 6px;
+}
+
+/* Section 2: lado derecho.. */
+.main-content > div:nth-child(2) {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.card{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    height: 100px;
+    position: relative;
+    width: 100%;
+}
+
+.card > div:first-child {
+    align-items: center;
+    border-radius: 16px;
+    display: flex;
+    grid-column: 1 / 5;
+    grid-row: 1 / 2;
+    z-index: 1;
+}
+
+.card > div:first-child p {
+    color: white;
+    margin: 0;
+    padding-right: 7px;
+    transform: rotate(180deg);
+    writing-mode: vertical-rl;
+}
+
+.card > div:last-child {
+    border-radius: 16px;
+    display: grid;
+    grid-column: 2 / 5;
+    grid-row: 1 / 2;
+    justify-content: center;
+    z-index: 2;
+}
+
+.card > div:last-child p:first-child {
+    font-size: 24px;
+    font-weight: 600; 
+    margin: 18px 0 -8px 0;
+}
+
+.card > div:last-child p:last-child {
+    margin: 0;
+}
+
+.margin-bottom-card {
+    margin-bottom: 20px;
+}
+
+/* burbujas......... */
+.bubble {
+    border-radius: 50%;
+    position: absolute;
+}
+
+.bubble-one {
+    height: 80px;
+    left: 300px;
+    top: 10px;
+    width: 80px;
+}
+
+.bubble-two {
+    height: 230px;
+    right: 200px;
+    top: -50px;
+    width: 230px;
+}
+
+.bubble-three {
+    height: 50px;
+    right: 450px;
+    top: -20px;
+    width: 50px;
+}
+
+.bubble-four {
+    bottom: 40px;
+    height: 100px;
+    left: -30px;
+    width: 100px;
+}
+/* responsive... */
+
+@media (max-width: 1300px){
+    .container {
+        grid-template-columns: none;
+        height: 100%;
+    }
+
+    body {
+        height: 100%;
+    }
+}
+
+@media (max-width: 900px){
+    .main-content > div:nth-child(2) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 650px){
+    .main-content > div:nth-child(2) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px){
+    .main-content > div:nth-child(2) {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
