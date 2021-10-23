@@ -1,0 +1,7 @@
+@mixin ancho{
+  width: 80%;
+}
+
+@mixin height($alto) {
+  height: $alto;
+}
